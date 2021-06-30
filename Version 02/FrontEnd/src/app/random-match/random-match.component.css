@@ -1,0 +1,92 @@
+.randomMatchContainer {
+  border: 3px solid white;
+  width: 80%;
+  height: 75%;
+  overflow: auto;
+  margin-top: 20px;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  letter-spacing: 2px;
+  background-color: #D23030;
+  color: white;
+  line-height: 1.6;
+}
+
+.btnContainer {
+  width: 100%;
+}
+
+.btn {
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 3px solid white;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover {
+  color: #FF6978;
+  background-color: white;
+  border: 3px solid red;
+}
+
+.circle {
+  width: 250px;
+  height: 250px;
+  line-height: 250px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  background: white;
+  opacity: 0.95;
+  letter-spacing: 5px;
+  border: 3px solid red;
+}
+
+.vs {
+  padding: 25px;
+  color: #111111;
+  font-weight: bolder;
+  letter-spacing: 4px;
+  font-size: 17px;
+}
+
+.randomMatch {
+  text-align: center;
+  background-color: transparent;
+  padding: 2em 0 2em 0;
+  width: 100%;
+  display: inline-block;
+}
+
+.clubContainer {
+  position: relative;
+  box-sizing: border-box;
+}
+
+div {
+  display: inline-block;
+}
+
+.matchDetails {
+  padding-top: 20px;
+  text-align: center;
+}
+
+span {
+  top: 50%;
+  left: 50%;
+  padding-right: 25px;
+  padding-left: 25px;
+  letter-spacing: 5px;
+  font-size: 20px;
+}

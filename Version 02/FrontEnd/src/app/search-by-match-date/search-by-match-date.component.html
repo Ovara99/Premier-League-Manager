@@ -1,0 +1,26 @@
+<section class="tableContainer">
+  <!-- search-by-match-date component -->
+  <div class="searchContainer">
+    <input type="text" id="searchBar" placeholder="Search By Match Date" name="search" #searchTerm
+    (keyup.enter)="searchMatchByDate(searchTerm.value)" (focus)="searchTerm.value='' ">
+    <button type="submit" id="searchButton" (click)="searchMatchByDate(searchTerm.value)"><fa-icon [icon]="faSearch"></fa-icon></button>
+  </div>
+  <div class="matchTable">
+    <table>
+      <tr>
+        <th>Home Team</th>
+        <th>Away Team</th>
+        <th>Match Date</th>
+        <th>Home Team Goals Scored</th>
+        <th>Away Team Goals Scored</th>
+      </tr>
+      <tr *ngFor="let footballMatch of searchMatchData">
+        <td>{{footballMatch.homeTeam.clubName}}, {{footballMatch.homeTeam.clubLocation}}</td>
+        <td>{{footballMatch.awayTeam.clubName}}, {{footballMatch.awayTeam.clubLocation}}</td>
+        <td>{{footballMatch.matchDate}}</td>
+        <td>{{footballMatch.homeTeamGoalsScored}}</td>
+        <td>{{footballMatch.awayTeamGoalsScored}}</td>
+      </tr>
+    </table>
+  </div>
+</section>

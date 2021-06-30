@@ -1,0 +1,24 @@
+<section class="tableContainer">
+  <!-- sort-by-match-date component -->
+  <div class="sortContainer">
+    <button id="sortButton" (click)="sortByMatchDate()">Sort Matches By Date</button>
+  </div>
+  <div class="matchTable">
+    <table>
+      <tr>
+        <th>Home Team</th>
+        <th>Away Team</th>
+        <th>Match Date</th>
+        <th>Home Team Goals Scored</th>
+        <th>Away Team Goals Scored</th>
+      </tr>
+      <tr *ngFor="let footballMatch of matchTableData">
+        <td>{{footballMatch.homeTeam.clubName}}, {{footballMatch.homeTeam.clubLocation}}</td>
+        <td>{{footballMatch.awayTeam.clubName}}, {{footballMatch.awayTeam.clubLocation}}</td>
+        <td>{{footballMatch.matchDate}}</td>
+        <td>{{footballMatch.homeTeamGoalsScored}}</td>
+        <td>{{footballMatch.awayTeamGoalsScored}}</td>
+      </tr>
+    </table>
+  </div>
+</section>

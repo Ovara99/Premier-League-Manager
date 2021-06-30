@@ -1,0 +1,20 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: PremierSans-Regular, Arial, sans-serif;
+  font-size: 20px;
+  display: block;
+  overflow: hidden;
+  alignment: center;
+  overflow-y: auto;
+}
+
+#favicon {
+  height: 14px;
+  width: 32px;
+}
+
+::selection {
+  color: white;
+  background-color: red;
+}

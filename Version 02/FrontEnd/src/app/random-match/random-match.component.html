@@ -1,0 +1,26 @@
+<section class="randomMatchContainer">
+  <!-- random-match component content-->
+  <div class="btnContainer">
+    <button class="btn" (click)="generateRandomMatch()">Generate a random match</button>
+  </div>
+  <section class="randomMatch">
+    <div class="clubContainer">
+      <div class="circle">{{randomMatchData.homeTeam.clubName}}, {{randomMatchData.homeTeam.clubLocation}}</div>
+      <div class="vs">
+        <p>VS</p>
+      </div>
+      <div class="circle">{{randomMatchData.awayTeam.clubName}}, {{randomMatchData.awayTeam.clubLocation}}</div>
+    </div>
+  </section>
+  <section class="matchDetails">
+    <div><span>HOME TEAM</span></div>
+    <div><span>{{randomMatchData.matchDate}}</span></div>
+    <div><span>AWAY TEAM</span></div>
+  </section>
+  <section class="matchDetails">
+    <div><span>{{randomMatchData.homeTeamGoalsScored}}</span></div>
+    <div><span>Goals Scored</span></div>
+    <div><span>{{randomMatchData.awayTeamGoalsScored}}</span></div>
+  </section>
+</section>
+

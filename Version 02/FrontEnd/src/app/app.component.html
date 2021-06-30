@@ -1,0 +1,32 @@
+<body>
+  <section>
+    <!-- navigation bar -->
+    <div class="navbarContainer">
+      <div class="logoContainer">
+        <a [routerLink]="['home']" routerLinkActive="active">
+          <img id ="logo" src="assets/images/logo.png" alt="Premier League Logo">
+        </a>
+      </div>
+      <div class="navbar" id="responsiveNavbar">
+        <div class="rightNavbar">
+          <a [routerLink]="['home']" routerLinkActive="active">Home</a>
+          <a [routerLink]="['league-table']" routerLinkActive="active">Premier League Table</a>
+          <div class="dropdown">
+            <button class="dropBtn">Football Matches
+              <fa-icon [icon]="faCaretDown"></fa-icon>
+            </button>
+            <div class="dropdownContent">
+              <a [routerLink]="['random-match']" routerLinkActive="active">Random match</a>
+              <a [routerLink]="['sort-by-match-date']" routerLinkActive="active">Sort matches</a>
+              <a [routerLink]="['search-by-match-date']" routerLinkActive="active">Search matches</a>
+            </div>
+          </div>
+          <a href="javascript:void(0);" class="icon" (click)="responsiveNav()">
+            <fa-icon [icon]="faBars"></fa-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </section>
+</body>

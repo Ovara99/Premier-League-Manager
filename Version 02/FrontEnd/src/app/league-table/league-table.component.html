@@ -1,0 +1,44 @@
+<section class="leagueTableContainer">
+  <!-- league-table component content-->
+  <div class="sort">
+    <button class="btn">Sort By</button>
+    <div class="dropdown">
+      <button class="btn">
+        <fa-icon [icon]="faCaretDown"></fa-icon>
+      </button>
+      <div class="dropdownMenu">
+        <a class="dropdownItem" (click)="sortTableByPoints()">Points</a>
+        <a class="dropdownItem" (click)="sortTableByGoalsScored()">Goals Scored</a>
+        <a class="dropdownItem" (click)="sortTableByNoOfWins()">No of wins</a>
+      </div>
+    </div>
+  </div>
+  <div class="leagueTable">
+    <table>
+      <tr>
+        <th>Position</th>
+        <th id="club">Club</th>
+        <th>Played</th>
+        <th>Won</th>
+        <th>Drawn</th>
+        <th>Lost</th>
+        <th>Goals Scored</th>
+        <th>Goals Received</th>
+        <th>Goal Difference</th>
+        <th>Points</th>
+      </tr>
+      <tr *ngFor="let footballClub of leagueTableData">
+        <td>{{footballClub.clubPosition}}</td>
+        <td>{{footballClub.clubName}}, {{footballClub.clubLocation}}</td>
+        <td>{{footballClub.noOfPlayedMatches}}</td>
+        <td>{{footballClub.noOfWins}}</td>
+        <td>{{footballClub.noOfDraws}}</td>
+        <td>{{footballClub.noOfDefeats}}</td>
+        <td>{{footballClub.goalsScored}}</td>
+        <td>{{footballClub.goalsReceived}}</td>
+        <td>{{footballClub.goalDifference}}</td>
+        <td>{{footballClub.noOfPoints}}</td>
+      </tr>
+    </table>
+  </div>
+</section>
